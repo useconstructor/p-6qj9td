@@ -21,8 +21,7 @@ import {
   Inbox,
   Layout,
   Target,
-  Check,
-  Sparkles
+  Check
 } from "lucide-react"
 
 export default function HomePage() {
@@ -143,47 +142,55 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="relative pt-36 pb-24 overflow-hidden min-h-screen">
-        {/* Background Nebula Effects - More prominent and colorful */}
+        {/* Background Nebula Effects - Vibrant and prominent */}
         <div className="absolute inset-0 overflow-hidden">
-          {/* Main purple nebula */}
+          {/* Main purple nebula - more vibrant */}
           <div
-            className="absolute top-0 left-1/2 -translate-x-1/2 w-[1400px] h-[1400px] rounded-full opacity-40"
+            className="absolute top-0 left-1/2 -translate-x-1/2 w-[1800px] h-[1800px] rounded-full opacity-70"
             style={{
-              background: "radial-gradient(ellipse at center, #8B5CF6 0%, #6D28D9 25%, #4C1D95 40%, transparent 70%)",
+              background: "radial-gradient(ellipse at center, #A855F7 0%, #8B5CF6 20%, #7C3AED 35%, #6D28D9 50%, transparent 70%)",
+              filter: "blur(60px)",
+            }}
+          />
+          {/* Pink/magenta accent nebula - more vibrant */}
+          <div
+            className="absolute top-0 right-0 w-[1200px] h-[1200px] rounded-full opacity-50"
+            style={{
+              background: "radial-gradient(ellipse at center, #F472B6 0%, #EC4899 20%, #DB2777 40%, transparent 70%)",
               filter: "blur(80px)",
             }}
           />
-          {/* Pink/magenta accent nebula */}
+          {/* Blue accent nebula - more vibrant */}
           <div
-            className="absolute top-20 right-0 w-[900px] h-[900px] rounded-full opacity-30"
+            className="absolute top-20 left-0 w-[1000px] h-[1000px] rounded-full opacity-40"
             style={{
-              background: "radial-gradient(ellipse at center, #EC4899 0%, #DB2777 30%, transparent 70%)",
+              background: "radial-gradient(ellipse at center, #60A5FA 0%, #3B82F6 30%, transparent 70%)",
+              filter: "blur(70px)",
+            }}
+          />
+          {/* Cyan/teal accent - more vibrant */}
+          <div
+            className="absolute bottom-0 right-1/4 w-[800px] h-[800px] rounded-full opacity-35"
+            style={{
+              background: "radial-gradient(ellipse at center, #22D3EE 0%, #06B6D4 30%, transparent 70%)",
+              filter: "blur(60px)",
+            }}
+          />
+          {/* Additional purple glow center */}
+          <div
+            className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[1400px] h-[1000px] rounded-full opacity-60"
+            style={{
+              background: "radial-gradient(ellipse at center, #A855F7 0%, #8B5CF6 30%, transparent 60%)",
               filter: "blur(100px)",
-            }}
-          />
-          {/* Blue accent nebula */}
-          <div
-            className="absolute top-40 left-0 w-[800px] h-[800px] rounded-full opacity-25"
-            style={{
-              background: "radial-gradient(ellipse at center, #3B82F6 0%, #1D4ED8 30%, transparent 70%)",
-              filter: "blur(90px)",
-            }}
-          />
-          {/* Cyan/teal accent */}
-          <div
-            className="absolute bottom-0 right-1/4 w-[600px] h-[600px] rounded-full opacity-20"
-            style={{
-              background: "radial-gradient(ellipse at center, #06B6D4 0%, #0891B2 30%, transparent 70%)",
-              filter: "blur(80px)",
             }}
           />
           {/* Star-like particles effect */}
           <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.3), transparent),
-                              radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.2), transparent),
-                              radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.4), transparent),
-                              radial-gradient(2px 2px at 130px 80px, rgba(255,255,255,0.2), transparent),
-                              radial-gradient(1px 1px at 160px 120px, rgba(255,255,255,0.3), transparent)`,
+            backgroundImage: `radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.4), transparent),
+                              radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.3), transparent),
+                              radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.5), transparent),
+                              radial-gradient(2px 2px at 130px 80px, rgba(255,255,255,0.3), transparent),
+                              radial-gradient(1px 1px at 160px 120px, rgba(255,255,255,0.4), transparent)`,
             backgroundSize: '200px 200px',
           }} />
         </div>
@@ -240,7 +247,7 @@ export default function HomePage() {
             </div>
 
             {/* Right Content - Large Dashboard Preview */}
-            <div className="relative lg:scale-110 lg:translate-x-8">
+            <div className="relative lg:scale-125 lg:translate-x-12 lg:-translate-y-4">
               <div
                 className="rounded-2xl p-1.5 shadow-2xl"
                 style={{
@@ -445,204 +452,61 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Features Section - 2x2 Grid with Preview Images */}
-      <section id="features" className="py-28" style={{ backgroundColor: "#0D0D12" }}>
+      {/* Stats/Metrics Bar - 6 KPIs */}
+      <section className="py-16 relative" style={{ backgroundColor: "#0D0D12" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <Badge className="mb-6 px-5 py-2.5 text-base font-medium border-0" style={{ backgroundColor: "rgba(139, 92, 246, 0.25)", color: "#A78BFA" }}>
-              POWERFUL FEATURES
-            </Badge>
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Everything your team needs
-            </h2>
-            <p className="text-xl max-w-2xl mx-auto" style={{ color: "#A1A1AA" }}>
-              Orbit PM combines powerful features with an intuitive interface to help you manage projects, resources, and teams effortlessly.
-            </p>
-          </div>
-
-          {/* 2x2 Grid */}
-          <div className="grid md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
-              <Card
-                key={index}
-                className="p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300 group overflow-hidden"
-                style={{ backgroundColor: "#16161F" }}
-              >
-                <div className="flex items-start gap-6 mb-6">
-                  <div
-                    className="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform"
-                    style={{ backgroundColor: "rgba(139, 92, 246, 0.25)" }}
-                  >
-                    <feature.icon className="w-7 h-7" style={{ color: "#A78BFA" }} />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{feature.title}</h3>
-                    <p className="text-base leading-relaxed" style={{ color: "#A1A1AA" }}>{feature.description}</p>
-                  </div>
-                </div>
-
-                {/* Feature Preview Image/Mockup */}
-                <div className="rounded-xl overflow-hidden" style={{ backgroundColor: "#0D0D12" }}>
-                  <div className="p-5">
-                    {index === 0 && (
-                      <div className="space-y-4">
-                        <div className="flex items-center justify-between">
-                          <span className="text-sm text-gray-400 font-medium">Q2 Product Roadmap</span>
-                          <span className="text-xs px-2 py-1 rounded-full bg-green-500/20 text-green-400">On Track</span>
-                        </div>
-                        <div className="space-y-3">
-                          <div>
-                            <div className="flex justify-between text-sm mb-1">
-                              <span className="text-white">Mobile App Launch</span>
-                              <span className="text-gray-500">75%</span>
-                            </div>
-                            <div className="h-3 rounded-full bg-purple-500/20 overflow-hidden">
-                              <div className="h-full w-3/4 rounded-full" style={{ backgroundColor: "#8B5CF6" }} />
-                            </div>
-                          </div>
-                          <div>
-                            <div className="flex justify-between text-sm mb-1">
-                              <span className="text-white">API V2 Release</span>
-                              <span className="text-gray-500">50%</span>
-                            </div>
-                            <div className="h-3 rounded-full bg-purple-500/20 overflow-hidden">
-                              <div className="h-full w-1/2 rounded-full" style={{ backgroundColor: "#8B5CF6" }} />
-                            </div>
-                          </div>
-                          <div>
-                            <div className="flex justify-between text-sm mb-1">
-                              <span className="text-white">Dashboard Redesign</span>
-                              <span className="text-gray-500">90%</span>
-                            </div>
-                            <div className="h-3 rounded-full bg-purple-500/20 overflow-hidden">
-                              <div className="h-full w-[90%] rounded-full" style={{ backgroundColor: "#10B981" }} />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                    {index === 1 && (
-                      <div className="space-y-3">
-                        {[
-                          { avatar: "bg-blue-500", initials: "MJ", name: "Mike Johnson", action: "Updated the API integration specs", time: "2m ago" },
-                          { avatar: "bg-pink-500", initials: "SC", name: "Sarah Chen", action: "Commented on Dashboard wireframes", time: "15m ago" },
-                          { avatar: "bg-green-500", initials: "AL", name: "Alex Lee", action: "Completed Mobile navigation task", time: "1h ago" },
-                        ].map((activity, i) => (
-                          <div key={i} className="flex items-center space-x-3 p-3 rounded-lg" style={{ backgroundColor: "rgba(255,255,255,0.03)" }}>
-                            <div className={`w-10 h-10 rounded-full ${activity.avatar} flex items-center justify-center text-white text-sm font-bold`}>
-                              {activity.initials}
-                            </div>
-                            <div className="flex-1">
-                              <div className="flex items-center gap-2">
-                                <span className="text-sm text-white font-medium">{activity.name}</span>
-                                <span className="text-xs text-gray-500">{activity.time}</span>
-                              </div>
-                              <p className="text-sm text-gray-400">{activity.action}</p>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                    {index === 2 && (
-                      <div>
-                        <div className="flex items-center justify-between mb-4">
-                          <span className="text-sm text-gray-400 font-medium">Team Velocity</span>
-                          <span className="text-sm text-green-400 font-semibold">+12% this week</span>
-                        </div>
-                        <div className="h-32 flex items-end space-x-2">
-                          {[40, 55, 45, 60, 70, 65, 80, 75, 85, 70, 90, 85].map((h, i) => (
-                            <div
-                              key={i}
-                              className="flex-1 rounded-t transition-all duration-300"
-                              style={{
-                                height: `${h}%`,
-                                backgroundColor: i >= 10 ? "#8B5CF6" : "rgba(139, 92, 246, 0.4)"
-                              }}
-                            />
-                          ))}
-                        </div>
-                        <div className="flex justify-between mt-3 text-xs text-gray-500">
-                          <span>Mon</span>
-                          <span>Wed</span>
-                          <span>Fri</span>
-                          <span>Sun</span>
-                        </div>
-                      </div>
-                    )}
-                    {index === 3 && (
-                      <div className="space-y-4">
-                        <div className="p-4 rounded-lg border border-purple-500/30" style={{ backgroundColor: "rgba(139, 92, 246, 0.1)" }}>
-                          <div className="flex items-center space-x-3 text-sm mb-3">
-                            <Sparkles className="w-5 h-5 text-purple-400" />
-                            <span className="text-purple-300 font-medium">Automation Rule</span>
-                          </div>
-                          <div className="space-y-3">
-                            <div className="flex items-center space-x-3">
-                              <span className="text-gray-400 text-sm">When</span>
-                              <span className="text-white px-3 py-1.5 rounded-lg text-sm font-medium" style={{ backgroundColor: "rgba(139, 92, 246, 0.3)" }}>Task is completed</span>
-                            </div>
-                            <div className="flex items-center space-x-3">
-                              <ArrowRight className="w-4 h-4 text-purple-400" />
-                              <span className="text-gray-400 text-sm">Then</span>
-                              <span className="text-white px-3 py-1.5 rounded-lg text-sm font-medium" style={{ backgroundColor: "rgba(139, 92, 246, 0.3)" }}>Move to Done column</span>
-                            </div>
-                            <div className="flex items-center space-x-3">
-                              <ArrowRight className="w-4 h-4 text-purple-400" />
-                              <span className="text-gray-400 text-sm">And</span>
-                              <span className="text-white px-3 py-1.5 rounded-lg text-sm font-medium" style={{ backgroundColor: "rgba(139, 92, 246, 0.3)" }}>Notify assignee</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </Card>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-4">
+            {[
+              { value: "10K+", label: "Active Teams" },
+              { value: "2.5M+", label: "Tasks Completed" },
+              { value: "98.9%", label: "Uptime SLA" },
+              { value: "150+", label: "Integrations" },
+              { value: "4.9/5", label: "User Rating" },
+              { value: "24/7", label: "Support" },
+            ].map((stat, index) => (
+              <div key={index} className="text-center">
+                <p className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.value}</p>
+                <p className="text-sm" style={{ color: "#A1A1AA" }}>{stat.label}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-28 relative overflow-hidden">
-        {/* Background gradient for CTA */}
-        <div className="absolute inset-0">
-          <div
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] rounded-full opacity-30"
-            style={{
-              background: "radial-gradient(ellipse at center, #8B5CF6 0%, #6D28D9 30%, transparent 70%)",
-              filter: "blur(100px)",
-            }}
-          />
-        </div>
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
-            Ready to transform how your team works?
-          </h2>
-          <p className="text-xl mb-10 max-w-2xl mx-auto" style={{ color: "#A1A1AA" }}>
-            Join thousands of teams already using Orbit PM to ship faster and stay aligned. Start free today.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-5 justify-center">
-            <Button
-              size="lg"
-              className="text-white px-10 py-7 text-lg font-semibold rounded-xl"
-              style={{ backgroundColor: "#8B5CF6" }}
-            >
-              Get started for free
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="px-10 py-7 text-lg font-semibold border-white/20 text-white hover:bg-white/5 rounded-xl"
-              style={{ backgroundColor: "transparent" }}
-            >
-              Talk to sales
-            </Button>
+      {/* Features Section - 4-column horizontal layout */}
+      <section id="features" className="py-20" style={{ backgroundColor: "#0D0D12" }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <Badge className="mb-6 px-5 py-2.5 text-base font-medium border-0" style={{ backgroundColor: "rgba(139, 92, 246, 0.25)", color: "#A78BFA" }}>
+              POWERFUL FEATURES
+            </Badge>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Everything your team needs
+            </h2>
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: "#A1A1AA" }}>
+              Orbit PM combines powerful features with an intuitive interface to help you manage projects, resources, and teams effortlessly.
+            </p>
           </div>
-          <p className="mt-8 text-base" style={{ color: "#71717A" }}>
-            No credit card required • Free plan includes 5 team members
-          </p>
+
+          {/* 4-column horizontal grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {features.map((feature, index) => (
+              <Card
+                key={index}
+                className="p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 group"
+                style={{ backgroundColor: "#16161F" }}
+              >
+                <div
+                  className="w-12 h-12 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform"
+                  style={{ backgroundColor: "rgba(139, 92, 246, 0.25)" }}
+                >
+                  <feature.icon className="w-6 h-6" style={{ color: "#A78BFA" }} />
+                </div>
+                <h3 className="text-lg font-bold text-white mb-3">{feature.title}</h3>
+                <p className="text-sm leading-relaxed" style={{ color: "#A1A1AA" }}>{feature.description}</p>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
